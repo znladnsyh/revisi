@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 4 Sidebar Menu Responsive with Sub menu  Create Responsive Side Navigation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="gaya.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <!-- Vertical navbar -->
+  <div class="vertical-nav " id="sidebar" style="background-color: #e3f2fd;">
+    <div class="py-4 px-3 mb-4 bg-light">
+      <div class="media d-flex align-items-center">
+        <img loading="lazy" src="images/logo2.jpg" alt="..." width="80" height="80" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+        <div class="media-body" >
+          <h4 class="m-0">IRPHONE</h4>
+          <p class="font-weight-normal text-muted mb-0">Jl Ahmad yamin</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Dashboard</p>
+
+    <ul class="nav flex-column bg-white mb-0">
+      <li class="nav-item">
+        <a href="coba.html" class="nav-link text-dark ">
+          <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+          home
+        </a>
+      </li>
+     <li class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-expanded="false" >
+          <i class="fa fa-address-card mr-3 text-primary fa-fw " ></i>Data Master
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="formadmin.html">Admin</a>
+          <a class="dropdown-item" href="formkaryawan.html">karyawan</a>
+          <a class="dropdown-item" href="coba.html"><i class='bx bx-log-out'></i>keluar</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="stokbarang.html" class="nav-link text-dark">
+          <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+          Stok Barang
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="Penjualan.html" class="nav-link text-dark">
+          <i class='bx bx-shopping-bag text-primary fa-fw' ></i>
+           Penjualan
+        </a>
+      </li>
+    </ul>
+
+    <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Setting</p>
+
+    <ul class="nav flex-column bg-white mb-0">
+      <li class="nav-item">
+        <a href="Laporan.html" class="nav-link text-dark">
+          <i class='bx bxs-report text-primary' ></i>
+          Laporan
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="Pengaturan.html" class="nav-link text-dark">
+         <i class='bx bx-cog text-primary' ></i>
+          Pengaturan
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="tblgajikaryawan.html" class="nav-link text-dark">
+          <i class='bx bx-wallet text-primary'></i>
+          Gaji Karyawan
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="index.html" class="nav-link text-dark" data-toggle="modal" data-target="#logout">
+          <i class='bx bx-log-out text-primary'></i>
+          Log-out
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- End vertical navbar -->
+  <!-- The Modal -->
+<div class="modal" id="logout">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Log-Out</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        apakah anda yakin ingin keluar ?
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <a href="utama.html" class="btn btn-success">log-out</a>
+        <a href="admin.html" class="btn btn-danger">batal</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Page content holder -->
+  <div class="page-content p-5" id="content">
+    <!-- Toggle button -->
+    <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold"></small></button>
+
+    <!-- Demo content -->
+    <nav class="navbar navbar-light navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #e3f2fd; "><!-- navbar -->
+      <a class="navbar-brand" href="#">IRPHONE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0 ml-auto" >
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <div class="icon ml-4">
+          <h5>
+            <i class='bx bx-envelope mr-3 ' data-toggle="tooltip" title="surat masuk" ></i>
+            <i class='bx bxs-bell mr-3' data-toggle="tooltip" title="notifikasi"  ></i>
+            
+          </h5>
+
+        </div>
+      </div>
+    </nav><!-- end navbar -->
+    
+
+
+
+
+
+
+    
+    <br><br><h5><b><i class='bx bxs-dashboard'></i>GAJI KARYAWAN</b></h5>
+    <hr>
+
+   <div class="container">
+    <div class="row" style="margin-top: 100px">
+      
+      <div class="col-sm-12">
+
+        <div class="card">
+          <div class="card-body">
+            
+            <center>
+              <span style="font-family: Times New Roman;font-size: 25px;">Tabel Laporan Keuangan</span>
+            </center>
+
+            <br>
+            <div class="table-responsive">
+
+            <table border="1" cellpadding="10">
+              <tr style="background-color: black;">
+                <td width="50" align="center" style="color: #f8f8ff;"><b>No</b></td>
+                <td width="200" align="center" style="color: #f8f8ff;"><b>Tanggal</b></td>
+                <td width="260" align="center" style="color: #f8f8ff;"><b>Keterangan</b></td>
+                <td width="280" align="center" style="color: #f8f8ff;"><b>Debit</b></td>
+                <td width="280" align="center" style="color: #f8f8ff;"><b>Kredit</b></td>
+                <td width="280" align="center" style="color: #f8f8ff;"><b>Saldo</b></td>
+                <td width="280" align="center" style="color: #f8f8ff;"><b>Aksi</td>
+              </tr>
+              <tr>
+                <td width="50" align="center">1</td>
+                <td width="200" align="center">1/10/2022</td>
+                <td width="260" align="center">Saldo awal</td>
+                <td width="280" align="center">Rp. 3.000.000</td>
+                <td width="280" align="center">-</td>
+                <td width="280" align="center">Rp. 3.000.000</td>
+                <td><a href="form+pelanggan.html" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit"><i class='bx bxs-user-plus'></i></a>
+                <a href="#" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="hapus"><i class='bx bx-message-alt-x'></i></a>
+
+              </td>
+              </tr>
+              <tr>
+                <td width="50" align="center">2</td>
+                <td width="200" align="center">2/10/2022</td>
+                <td width="260" align="center">Pemeliharaan perangkat</td>
+                <td width="280" align="center">-</td>
+                <td width="280" align="center">Rp. 500.000</td>
+                <td width="280" align="center">Rp. 2.500.000</td>
+                 <td><a href="form+pelanggan.html" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit"><i class='bx bxs-user-plus'></i></a>
+                <a href="#" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="hapus"><i class='bx bx-message-alt-x'></i></a></td>
+              </tr>
+              <tr>
+                <td width="50" align="center">3</td>
+                <td width="200" align="center">3/10/2022</td>
+                <td width="260" align="center">Bayar sewa toko</td>
+                <td width="280" align="center">-</td>
+                <td width="280" align="center">Rp. 1.000.000</td>
+                <td width="280" align="center">Rp. 1.500.000</td>
+                <td><a href="form+pelanggan.html" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit"><i class='bx bxs-user-plus'></i></a>
+                <a href="#" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="hapus"><i class='bx bx-message-alt-x'></i></a></td>
+              </tr>
+              <tr>
+                <td width="50" align="center">4</td>
+                <td width="200" align="center">4/10/2022</td>
+                <td width="260" align="center">Uang dari customer</td>
+                <td width="280" align="center">Rp. 500.000</td>
+                <td width="280" align="center">-</td>
+                <td width="280" align="center">Rp. 2.000.000</td>
+                <td><a href="form+pelanggan.html" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit"><i class='bx bxs-user-plus'></i></a>
+                <a href="#" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="hapus"><i class='bx bx-message-alt-x'></i></a></td>
+              </tr>
+              <tr>
+                <td width="50" align="center">5</td>
+                <td width="200" align="center">5/10/2022</td>
+                <td width="260" align="center">Beli stok barang</td>
+                <td width="280" align="center">-</td>
+                <td width="280" align="center">Rp. 1.000.000</td>
+                <td width="280" align="center">Rp. 1.000.000</td>
+                <td><a href="form+pelanggan.html" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit"><i class='bx bxs-user-plus'></i></a>
+                <a href="#" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="hapus"><i class='bx bx-message-alt-x'></i></a></td>
+              </tr>
+              
+
+            </table>
+          </div>
+            <br>
+            <br>
+            <div class="form-group">
+              <a href="" class="btn btn-success">Tambah</a>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    
+  </div>
+
+
+
+  </div>
+  <!-- End demo content -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="admin.js"></script>
+  <script type="">
+
+    $(function() { 
+      $('#sidebarCollapse').on('click', function() {
+        $('#sidebar, #content').toggleClass('active');
+      });
+    });
+  </script>
+  <script type="">
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+  </script>
+</body>
+</html>
